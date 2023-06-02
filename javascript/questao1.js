@@ -5,8 +5,14 @@ function converter(){
   let arabico = 0;
   for (let i = 0; i < palavra.length; i++) {
     const element1 = palavra[i].toUpperCase();
-    
 
+    if(palavra[i+1] != undefined && palavra[i+2] !=undefined && palavra[i+3] !=undefined ){
+    if ((palavra[i].toUpperCase() === palavra[i+1].toUpperCase())&&(palavra[i+1].toUpperCase() === palavra[i+2].toUpperCase())&&(palavra[i+2].toUpperCase() === palavra[i+3].toUpperCase())) {
+      alert('Erro!!! Não podemos colocar mais de três simbolos arábicos seguidos!')
+    }
+  }
+    
+      if(palavra[i+1] != undefined){
     switch (element1) {
       case "M":
         arabico = arabico + 1000;
@@ -53,11 +59,11 @@ function converter(){
           arabico = arabico + 90;
           i++;
         } else if(palavra[i+1].toUpperCase() === "D") {
-          arabico = arabico + 40;
-          i++;
+          alert("Não pode utilizar o I antes do D");
+          break;
         } else if(palavra[i+1].toUpperCase() === "M"){
-          arabico = arabico + 990;
-          i++;
+          alert("Não pode utilizar o I antes do M");
+          break;
         } else {
           arabico = arabico + 10;
         }
@@ -85,19 +91,19 @@ function converter(){
         }
         break;
 
-      case "I" || 'i':
+      case "I":
         if (palavra[i+1].toUpperCase() ==="L"){
-          arabico = arabico + 49;
-          i++;
+          alert("Não pode utilizar o I antes do L");
+          break;
         } else if (palavra[i+1].toUpperCase() === "C"){
-          arabico = arabico + 99;
-          i++;
+          alert("Não pode utilizar o I antes do C");
+          break;
         } else if(palavra[i+1].toUpperCase() === "D") {
-          arabico = arabico + 499;
-          i++;
+          alert("Não pode utilizar o I antes do D");
+          break;
         } else if(palavra[i+1].toUpperCase() === "M"){
-          arabico = arabico + 999;
-          i++;
+          alert("Não pode utilizar o I antes do M");
+          break;
         } else if(palavra[i+1].toUpperCase() === "X"){
           arabico = arabico + 9;
           i++;
@@ -118,9 +124,61 @@ function converter(){
         break;
     }
     
+  } else {
+    switch (element1) {
+      case "M":
+        arabico = arabico + 1000;
+        break;
+        
+        case "D":
+        arabico = arabico + 500;
+        break;
+
+        case "C":
+          
+            arabico = arabico + 100;
+          
+        
+        break;
+        
+        case "L":
+          
+            arabico = arabico + 50;
+          
+        
+        break;
+        
+      case "X":
+        
+          arabico = arabico + 10;
+      
+        break;
+
+      case "V":
+        
+          arabico = arabico + 5;
+        
+        break;
+
+      case "I":
+        
+         arabico = arabico + 1;
+        
+
+
+        break;
+        
+        
+    
+      default:
+        break;
+      }
+
   }
+}
 
 
 
-  console.log(arabico)
+document.getElementById('conversao').value = arabico  
+console.log(arabico)
 }

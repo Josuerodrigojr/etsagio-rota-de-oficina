@@ -1,0 +1,56 @@
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+  background-image: linear-gradient(180deg, #ffb629 0, #ffa537 10%, #ff9243 20%, #ff7e4b 30%, #ff6951 40%, #f25353 50%, #d93f53 60%, #c22f54 70%, #ad2355 80%, #9b1b56 90%, #8c1859 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-size: 20px;
+  
+}
+
+body nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+body div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.linha1{
+  width: 180px;
+  height: 80px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.linha2{
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-align: center;
+  background-color:red;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.botao{
+  width: 100px;
+  height: 60px;
+}
