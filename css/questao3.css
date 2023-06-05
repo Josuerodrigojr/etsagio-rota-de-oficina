@@ -1,0 +1,50 @@
+html{
+  height: 100%;
+  background-image: url("../Imagem/restaurante.jpg");
+  color: rgb(214, 179, 20);
+
+}
+body{
+  margin: 0%;
+  padding: 0%;
+  height: 100%;
+  background: Drgbal (255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(92, 95, 139, 0.37);
+  backdrop-filter: blur( 7px );
+  border-radius: 10px;
+  border: 1px solid rgba(240, 6, 6, 0.18);
+  color:#000000;
+  font-weight: bold
+
+}
+
+
+
+
+table{
+  text-align: center;
+}
+
+button {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #ff0043;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+
+button:hover {
+  transition: 1s ease-in-out;
+  background: #746262;
+}
+
+
+
+button{
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}

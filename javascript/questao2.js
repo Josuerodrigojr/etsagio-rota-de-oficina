@@ -27,7 +27,50 @@ function celulasVivas (pintado){
   return vizinhosVivo;
 }
 
-function celulasMortas(posicao){
+function celulasMortas(){
+  let aceso = false;
+  let quantAceso = 0;
+  let acender = []
+  for (let i = 1; i <= 100; i++) {
+    for (let j = 0; j < selecionados.length; j++) {
+      if(selecionados[j]==i){
+        aceso = true;
+      }
+      
+    }
+    if(aceso == false){
+      console.log(i)
+      for (let w = 0; w < selecionados.length; w++) {
+
+        for (let z = 0; z < verificacaoVizinhos.length; z++) {
+          if (selecionados[w]==(parseInt(i) + verificacaoVizinhos[z])){
+
+            quantAceso++;
+          }
+          
+          
+        }
+        
+        
+          
+
+
+
+          
+        }
+        if(quantAceso===3){
+          acender.push(i)
+          console.log(acender)
+
+      }
+      quantAceso=0;
+      
+    }
+    
+    aceso = false;
+    
+  }
+  return acender;
 
 }
 
@@ -56,31 +99,26 @@ function start(){
         break;
     }
     
-    celulasMortas(pintados[i])
+   
 
-    // switch (celulasMortas(pintados[i])) {
-    //   case 2:
-    //     acender.push(pintados[i]);
-        
-    //     break;
     
-    //   default:
-    //     break;
-    // }
 
   }
   
+  acender = celulasMortas();
 
+  for (let i = 0; i < acender.length; i++) {
+    clicarEMudarPorId(acender[i])
+  }
 
   for (let i = 0; i < apagar.length; i++) {
     clicarEMudarPorId(apagar[i])
+
     
   }
 
-  // for (let i = 0; i < acender.length; i++) {
-  //   clicarEMudarPorId(acender[i])
-    
-  // }
+
+
   
 }
 
