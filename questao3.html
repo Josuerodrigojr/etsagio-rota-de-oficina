@@ -16,17 +16,23 @@
   <label>Produto:</label>
   <input id="produto">
 
-  <label>Item que consumiu sozinho?</a>
-    <select name="individual">
-        <option value="sim">Sim</option>
-        <option value="nao">Não</option>
+  <label>Item foi consumido sozinho?</a>
+    <select  id="individual">
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
     </select>
 
+    <label>Vai pagar a taxa?</a>
+      <select  id="taxa">
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+      </select>
+
   <label>Quantidade:</label>
-  <input id="quantidade">
+  <input id="quantidade" type="number">
 
   <label>Preço:</label>
-  <input id="preco">
+  <input id="preco" type="number">
 
 
   <button onclick="adicionarItem()"></button>
@@ -36,7 +42,7 @@
 
 
   
-  <button onclick="adicionar()">Adicionar</button>
+  <button onclick="total()">Adicionar</button>
 
   <table border="1" width="100%">
     
@@ -54,76 +60,6 @@
 
 
 
-  <label for="">Ano:</label>
-  <input type="number" id="ano">
-
-  <br><br>
-
-  <label for="">Cor:</label>
-  <input type="color" id="cor">
-
-  <br><br>
-
-  <label for="">Situação:</label>
-
-  
-  
-  <br>
-  <br>
-  
-  <label for="" >Preço: </label>
-  <input type="number" id="preco">
-
-  <br><br>
-
-
-      
-    <span>&nbsp;</span>
-      <button onclick="total()">Total</button>
-      <span>&nbsp;</span> 
-      <input type="text"  id="valorTotal">
-
-
-  <br><br>
-
-
-  <br><br>
-
-  <table border="1" width="100%">
-    <thead>
-      <tr>
-        <td>Clientes</td>
-        <td>Consumo</td>
-        <td>Taxa de consumo</td>
-     
-      </tr>
-    </thead>
-    <tbody id="lista">
-      <tr>
-        <td >Josué</td>
-        <td>
-          <form>
-            <INPUT TYPE="text" NAME="OPCAO" VALUE="op1"> Pizza
-            <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op2"> Refrigerante
-            <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op3"> Agua
-            </form>
-        </td>
-        <td><INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op1"></td>
-
-      </tr>
-      <tr>
-        <td>Maria</td>
-        <td>
-          <form>
-          <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op1"> Pizza
-          <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op2"> Refrigerante
-          <INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op3"> Agua
-          </form>
-        </td>
-        <td><INPUT TYPE="checkbox" NAME="OPCAO" VALUE="op1"></td>
-      </tr>
-    </tbody>
-  </table>
   
   <script src="/javascript/questao3.js"></script>
 </body>
