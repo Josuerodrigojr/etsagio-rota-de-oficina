@@ -1,0 +1,23 @@
+html{
+  background-image: url("../Imagem/romano.jpg");
+  background-size: 800px;  /* 80 pixels de largura e 60 pixels de altura */
+}
+
+h1, h2{
+color: rgb(234, 162, 19);
+}
+
+p{
+  color: #000;
+  text-shadow: 
+           -1px -1px 0px #FFF, 
+           -1px 1px 0px #FFF,                    
+            1px -1px 0px #FFF,                  
+            1px 0px 0px #FFF;
+  font-size: 2em;
+}
+
+input{
+  width: 120px;
+  height: 30px;
+}

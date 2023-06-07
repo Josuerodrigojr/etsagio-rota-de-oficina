@@ -33,8 +33,7 @@ for (let i = 0; i < clientes.length; i++) {
     
     
   }).join(""); 
-  console.log(clientes)
-  console.log(consumo)
+
 
 
 
@@ -64,7 +63,7 @@ const consumo = {
   individual: individual.value,
   taxa: taxa.value
 }
-console.log('preco do pessoal', consumo.preco)
+
 clientes.push(consumo.cliente)
 
 //Verificação no que comeu sozinho
@@ -80,7 +79,7 @@ if(consumo.individual == "Não"){
 
 gasto.push(consumo)
 
-console.log(consumoColetivo)
+
 
 let lista = document.getElementById('lista')
 
@@ -90,8 +89,9 @@ let lista = document.getElementById('lista')
     <td>${element.cliente}</td>
     <td>${element.produto}</td>
     <td>${element.individual}</td>
+    <td>${element.taxa}</td>
     <td>${element.quantidade}</td>
-    <td>${element.preco}</td>
+    <td>R$: ${element.preco}</td>
     </tr>
     `
   }).join("");
@@ -104,6 +104,11 @@ let lista = document.getElementById('lista')
 
 
 function total(){
+    
+  let gastos = 0;
+  let taxa = false;
+let total = [];
+let valorTotal = 0;
 
   
 
@@ -111,7 +116,7 @@ function total(){
         let quant = 1;
 
         quant = consumoColetivo.filter(x => x == gasto[j].produto).length;
-        console.log(quant, 'quantidade')
+
         if( quant == 0){
           quant = 1;
         }
@@ -120,31 +125,27 @@ function total(){
 
   }
 
-  console.log('Array ->>>', gasto)
 
 
 
-  
-  let gastos = 0;
-  let taxa = false;
-let total = [];
-let valorTotal = 0;
+
+
 
 //Separando os nomes para não ter repetição
 
-var novaArr = clientes.filter(function(element, i) {
+var nomeDosClientes = clientes.filter(function(element, i) {
     return clientes.indexOf(element) === i;
 });
-console.log(novaArr);
 
 
-for (let i = 0; i < novaArr.length; i++) {
+
+for (let i = 0; i < nomeDosClientes.length; i++) {
   for (let j = 0; j < gasto.length; j++) {
     
-    if(novaArr[i] == gasto[j].cliente){
-      console.log(gasto[j].cliente, novaArr[i])
+    if(nomeDosClientes[i] == gasto[j].cliente){
+
       gastos = gastos + (gasto[j].preco*gasto[j].quantidade)
-      console.log(gastos, 'gastos')
+
       if(gasto[j].taxa == 'Sim'){
         taxa = true
       }
@@ -159,12 +160,12 @@ for (let i = 0; i < novaArr.length; i++) {
   valorTotal = valorTotal + gastos
 
   let conta ={
-    cliente: novaArr[i],
+    cliente: nomeDosClientes[i],
     valor: gastos.toFixed(2)
   }
   total.push(conta)
   
-  console.log(total)
+
   gastos = 0;
   taxa = false;
 
@@ -174,7 +175,7 @@ for (let i = 0; i < novaArr.length; i++) {
   let lista = document.getElementById('lista')
 
   let conta = `<tr>
-  <td></td>
+  <td>Valor total</td>
   <td>${valorTotal.toFixed(2)}</td>
   
   </tr>
@@ -193,10 +194,3 @@ for (let i = 0; i < novaArr.length; i++) {
 
 
 
-
-
-function teste() {
-console.log(2*1.2)
-
-
-}

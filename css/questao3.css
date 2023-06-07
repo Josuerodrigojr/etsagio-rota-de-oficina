@@ -2,18 +2,21 @@ html{
   height: 100%;
   background-image: url("../Imagem/restaurante.jpg");
   color: rgb(214, 179, 20);
-
-}
-body{
-  margin: 0%;
-  padding: 0%;
-  height: 100%;
   background: Drgbal (255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(92, 95, 139, 0.37);
   backdrop-filter: blur( 7px );
+  background-size: 100%;
+
+}
+body{
+  margin: 10%;
+  padding: 0%;
+  height: 100%;
+
+
   border-radius: 10px;
   border: 1px solid rgba(240, 6, 6, 0.18);
-  color:#000000;
+  color:#ffffff;
   font-weight: bold
 
 }
@@ -25,26 +28,86 @@ table{
   text-align: center;
 }
 
-button {
-  width: 180px;
-  height: 60px;
+
+
+
+:root {
+  --cor-primaria-success: rgb(75, 200, 138);
+  --cor-hover-success: rgb(116, 158, 137);
+  --cor-secundaria-success: rgb(27, 66, 50);
+  
+  --cor-primaria-info: rgb(61, 157, 246);
+  --cor-hover-info: rgb(116, 134, 158);
+  --cor-secundaria-info: rgb(31, 62, 88);
+
+  --cor-primaria-danger: rgb(200, 75, 75);
+  --cor-hover-danger: rgb(158, 116, 116);
+  --cor-secundaria-danger: rgb(58, 22, 22);
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  text-decoration: none;
   cursor: pointer;
-  background: transparent;
-  border: 1px solid #ff0043;
+  transition: background .3s;
+  border-radius: 5px;
+}
+
+/*SUCCESS*/
+.btn-success {
+  background-color: var(--cor-primaria-success);
   outline: none;
-  transition: 1s ease-in-out;
+  color: var(--cor-secundaria-success)
 }
 
-
-button:hover {
-  transition: 1s ease-in-out;
-  background: #746262;
+.btn-success:hover {
+  background-color: var(--cor-hover-success);
 }
 
+.btn-success:active {
+  color:var(--cor-primaria-success);
+  background-color: var(--cor-secundaria-success);
+}
 
+/*INFO*/
+.btn-info {
+  background-color: var(--cor-primaria-info);
+  outline: none;
+  color: var(--cor-secundaria-info)
+}
 
-button{
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
+.btn-info:hover {
+  background-color: var(--cor-hover-info);
+}
+
+.btn-info:active {
+  color:var(--cor-primaria-info);
+  background-color: var(--cor-secundaria-info);
+}
+
+/*DANGER*/
+.btn-danger {
+  background-color: var(--cor-primaria-danger);
+  outline: none;
+  color: var(--cor-secundaria-danger)
+}
+
+.btn-succdangeress:hover {
+  background-color: var(--cor-hover-danger);
+}
+
+.btn-danger:active {
+  color:var(--cor-primaria-danger);
+  background-color: var(--cor-secundaria-danger);
+}
+
+label{
+  color: #000;
+  text-shadow: 
+           -1px -1px 0px #FFF, 
+           -1px 1px 0px #FFF,                    
+            1px -1px 0px #FFF,                  
+            1px 0px 0px #FFF;
+  font-size: 1em;
 }

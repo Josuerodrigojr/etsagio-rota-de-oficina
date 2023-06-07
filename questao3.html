@@ -13,8 +13,12 @@
   <label for="">Cliente :</label>
   <input type="text" id="cliente">
 
+  <br> <br>
+
   <label>Produto:</label>
   <input id="produto">
+
+  <br> <br>
 
   <label>Item foi consumido sozinho?</a>
     <select  id="individual">
@@ -22,29 +26,41 @@
         <option value="Não">Não</option>
     </select>
 
+    <br> <br>
+
     <label>Vai pagar a taxa?</a>
       <select  id="taxa">
           <option value="Sim">Sim</option>
           <option value="Não">Não</option>
       </select>
 
+      <br> <br>
+
   <label>Quantidade:</label>
   <input id="quantidade" type="number">
+
+  <br> <br>
 
   <label>Preço:</label>
   <input id="preco" type="number">
 
-
-  <button onclick="adicionarItem()"></button>
-
   <br> <br>
 
+  <button class="btn btn-sucess" onclick="adicionarItem()">Registrar consumo</button>
 
-
-  
-  <button onclick="total()">Adicionar</button>
+  <button class="btn btn-danger" onclick="total()">Total a pagar</button>
 
   <table border="1" width="100%">
+    <thead>
+      <tr>
+      <th> Cliente </th>
+      <th> Produto </th>
+      <th> Coletivo </th>
+      <th> Taxa </th>
+      <th> Quantidade </th>
+      <th> Preço </th>
+    </tr>
+    </thead>
     
     <tbody id="lista">
    

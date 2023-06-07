@@ -1,7 +1,10 @@
 let cor = 3;
 let verificacaoVizinhos = [-1,1,11,10,9,-9,-10,-11]
-
+let quadro = []
 let selecionados = [];
+let geracao = 0;
+
+
 
 function clicar(posicao){
   clicarEMudarPorId(posicao)
@@ -39,7 +42,7 @@ function celulasMortas(){
       
     }
     if(aceso == false){
-      console.log(i)
+
       for (let w = 0; w < selecionados.length; w++) {
 
         for (let z = 0; z < verificacaoVizinhos.length; z++) {
@@ -60,7 +63,6 @@ function celulasMortas(){
         }
         if(quantAceso===3){
           acender.push(i)
-          console.log(acender)
 
       }
       quantAceso=0;
@@ -117,20 +119,19 @@ function start(){
     
   }
 
-
-
+geracao++;
+document.getElementById("geracao").innerHTML = geracao + 'º geração'
   
 }
 
 function reset(){
-  console.log('foi')
   const limite = selecionados.length
   for (let i = 0; i < limite; i++) {
-    console.log(selecionados[0], selecionados.length)
     clicarEMudarPorId(selecionados[0]);
-    console.log(selecionados)
     
   }
+  geracao = 0;
+  document.getElementById("geracao").innerHTML = geracao + 'º geração'
   
 }
 

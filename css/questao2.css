@@ -30,13 +30,7 @@ div{
   grid-row: 1/2;
 }
 
-.linha1{
-  width: 180px;
-  height: 80px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 30px;
-  text-align: center;
-}
+
 
 .linha2{
   width: 60px;
@@ -50,8 +44,78 @@ div{
   cursor: pointer;
 }
 
-.botao{
-  width: 100px;
-  height: 60px;
+.centralizar{
+  text-align: center;
+}
+
+:root {
+  --cor-primaria-success: rgb(75, 200, 138);
+  --cor-hover-success: rgb(116, 158, 137);
+  --cor-secundaria-success: rgb(27, 66, 50);
+  
+  --cor-primaria-info: rgb(61, 157, 246);
+  --cor-hover-info: rgb(116, 134, 158);
+  --cor-secundaria-info: rgb(31, 62, 88);
+
+  --cor-primaria-danger: rgb(200, 75, 75);
+  --cor-hover-danger: rgb(158, 116, 116);
+  --cor-secundaria-danger: rgb(58, 22, 22);
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .3s;
+  border-radius: 5px;
+}
+
+/*SUCCESS*/
+.btn-success {
+  background-color: var(--cor-primaria-success);
+  outline: none;
+  color: var(--cor-secundaria-success)
+}
+
+.btn-success:hover {
+  background-color: var(--cor-hover-success);
+}
+
+.btn-success:active {
+  color:var(--cor-primaria-success);
+  background-color: var(--cor-secundaria-success);
+}
+
+/*INFO*/
+.btn-info {
+  background-color: var(--cor-primaria-info);
+  outline: none;
+  color: var(--cor-secundaria-info)
+}
+
+.btn-info:hover {
+  background-color: var(--cor-hover-info);
+}
+
+.btn-info:active {
+  color:var(--cor-primaria-info);
+  background-color: var(--cor-secundaria-info);
+}
+
+/*DANGER*/
+.btn-danger {
+  background-color: var(--cor-primaria-danger);
+  outline: none;
+  color: var(--cor-secundaria-danger)
+}
+
+.btn-succdangeress:hover {
+  background-color: var(--cor-hover-danger);
+}
+
+.btn-danger:active {
+  color:var(--cor-primaria-danger);
+  background-color: var(--cor-secundaria-danger);
 }
 

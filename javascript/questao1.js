@@ -1,5 +1,3 @@
-const element2 = "7";
-
 function converter(){
   const palavra = document.getElementById("converter").value;
   let arabico = 0;
@@ -180,5 +178,4 @@ function converter(){
 
 
 document.getElementById('conversao').value = arabico  
-console.log(arabico)
 }
